@@ -1,13 +1,31 @@
-class FeedsController < ApplicationController
+class Api::V1::PostsController < ApplicationController
   # before_action :set_location, only: [:show, :edit, :update, :destroy]
 
   # GET /locations
   def index
-    # @result = Search.new(params)
-    # @result.call
-    # @locations = Location.all
+    render json: Post.all
   end
 
+  # def create
+  #   fruit = Fruit.create(fruit_params)
+  #   render json: fruit
+  # end
+
+  # def destroy
+  #   Fruit.destroy(params[:id])
+  # end
+
+  # def update
+  #   fruit = Fruit.find(params[:id])
+  #   fruit.update_attributes(fruit_params)
+  #   render json: fruit
+  # end
+
+  # private
+
+  # def fruit_params
+  #   params.require(:fruit).permit(:id, :name, :description)
+  # end
   # # GET /locations/1
   # def show
   # end
