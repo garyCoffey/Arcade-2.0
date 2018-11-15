@@ -20,8 +20,8 @@ ActiveRecord::Schema.define(version: 2018_11_14_180048) do
   end
 
   create_table "posts", force: :cascade do |t|
-    t.text "address"
-    t.text "body"
+    t.string "address"
+    t.string "blog"
     t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

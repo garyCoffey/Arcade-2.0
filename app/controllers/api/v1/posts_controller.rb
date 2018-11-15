@@ -1,31 +1,47 @@
 class Api::V1::PostsController < ApplicationController
   # before_action :set_location, only: [:show, :edit, :update, :destroy]
-
+  skip_before_action :verify_authenticity_token
   # GET /locations
   def index
     render json: Post.all
   end
 
-  # def create
-  #   fruit = Fruit.create(fruit_params)
-  #   render json: fruit
-  # end
+  def create
+    post = Post.create(post_params)
+    render json: post
+  end
 
-  # def destroy
-  #   Fruit.destroy(params[:id])
-  # end
+  def show
+    # @post = Post.find(params[:id])
+    # redirect_to action_name_resource_path(resource_object, param_1: 'value_1', param_2: 'value_2')
+    # redirect_to static_pages_map_path(post: @post)
+    redirect_to static_pages_map_path(id: params[:id])
+  end
 
-  # def update
-  #   fruit = Fruit.find(params[:id])
-  #   fruit.update_attributes(fruit_params)
-  #   render json: fruit
-  # end
+  def destroy
+    Fruit.destroy(params[:id])
+  end
 
-  # private
+  def update
+    fruit = Fruit.find(params[:id])
+    fruit.update_attributes(fruit_params)
+    render json: fruit
+  end
 
-  # def fruit_params
-  #   params.require(:fruit).permit(:id, :name, :description)
-  # end
+  private
+
+  def post_params
+    params.require(:post).permit(:id, :address, :blog).merge(user_id: current_user.id)
+  end
+
+  def find_post
+    params.require(:post).permit(:id)
+  end
+
+
+
+
+
   # # GET /locations/1
   # def show
   # end

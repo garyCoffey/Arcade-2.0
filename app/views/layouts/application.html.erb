@@ -1,10 +1,15 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Arcade20</title>
+    <title>Arcade2.0</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <script src="//cdn.jsdelivr.net/npm/phaser@3.11.0/dist/phaser.js"></script>
+    <style type="text/css">
+        body {
+            margin: 0;
+        }
+    </style>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
@@ -12,12 +17,14 @@
   <body>
     <nav>
       <% if current_user %>
-        <p>Hello, <%= current_user.name %>!
+        <p>Hello, <%= current_user.email %>!
         <%= link_to 'Logout', destroy_user_session_path, method: :delete %>
       <% else %>
         <%= link_to 'Register', new_user_registration_path %>
         <%= link_to 'Login', new_user_session_path %>
       <% end %>
+      <%= link_to 'Home',  '/' %>
+      <%= link_to 'Game', static_pages_home_path %>
     </nav>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
