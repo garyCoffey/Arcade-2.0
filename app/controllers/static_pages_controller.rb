@@ -3,21 +3,7 @@ class StaticPagesController < ApplicationController
   end
 
   def map
-    @post = Post.find(params[:post])
-    p params
-    p @post
-    p @post
-    p @post
-    p @post
-    p @post
-    p @post
-    p @post
-    p @post
-    p @post
-    p @post
-    p @post
-    p @post
-
+    @post = Post.find(params[:id])
   end
 
   def help
