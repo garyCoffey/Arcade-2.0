@@ -1,4 +1,4 @@
-const Game = (props) => {
+const Game = () => {
   return (
     <div>
       <h1>Good Luck </h1>
