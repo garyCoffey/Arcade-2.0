@@ -36,7 +36,7 @@ class Body extends React.Component {
   }
 
   handleDelete(id) {
-    fetch(`https://arcade-room-blog.herokuapp.com/api/v1/postsapi/v1/posts/${id}`,
+    fetch(`https://arcade-room-blog.herokuapp.com/api/v1/posts/${id}`,
       {
         method: 'DELETE',
         headers: {
