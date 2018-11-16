@@ -1,6 +1,7 @@
 const AllGames = (props) => {
   // console.log(props)
   let games = props.games.map((game) => {
+    console.log(game.Url)
     playLink = `{game.Url}`
     return (
       <div key={game.id}>
