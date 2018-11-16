@@ -3,10 +3,11 @@ const AllPosts = (props) => {
     let showLink = `https://arcade-room-blog.herokuapp.com/api/v1/posts/${post.id}`
     return (
       <div key={post.id}>
-        <a href={showLink}><Post post={post} handleDelete={props.handleDelete} handleUpdate={props.handleUpdate} /></a>
+        <Post post={post} handleDelete={props.handleDelete} handleUpdate={props.handleUpdate} />
       </div >
     )
   })
+
   return (
     <div>
       {posts}
