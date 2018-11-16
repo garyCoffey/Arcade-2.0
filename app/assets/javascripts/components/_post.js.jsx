@@ -27,8 +27,6 @@ class Post extends React.Component {
       <div>
         {blog}
         {address}
-        {/* <h1>{this.props.post.blog}</h1>
-        <p>{this.props.post.address}</p> */}
         <button className="btn btn-primary" onClick={() => this.handleEdit()}>{this.state.editable ? 'Submit' : 'Edit'}</button>
         <button className="btn btn-primary" onClick={() => this.props.handleDelete(this.props.post.id)}>Delete</button>
       </div>
