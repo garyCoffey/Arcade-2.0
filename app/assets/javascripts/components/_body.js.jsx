@@ -1,4 +1,4 @@
-const URL = "https://cors-anywhere.herokuapp.com/https://arcade-room.herokuapp.com/"
+const URL = "https://cors-anywhere.herokuapp.com/https://arcade-room-blog.herokuapp.com/"
 
 class Body extends React.Component {
   constructor(props) {
