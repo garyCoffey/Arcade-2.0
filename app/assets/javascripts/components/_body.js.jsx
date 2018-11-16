@@ -15,7 +15,7 @@ class Body extends React.Component {
   }
 
   handleUpdate(post) {
-    fetch(`${URL}${post.id}`,
+    fetch(`${URL}/api/v1/posts/${post.id}`,
       {
         method: 'PUT',
         body: JSON.stringify({ post: post }),
