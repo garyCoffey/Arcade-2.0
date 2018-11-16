@@ -56,7 +56,7 @@ class Body extends React.Component {
 
   handleFormSubmit(address, blog) {
     let body = JSON.stringify({ post: { address: address, blog: blog } })
-    fetch(`${URL}api/v1/posts`, {
+    fetch(`https://arcade-room-blog.herokuapp.com/api/v1/posts`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
