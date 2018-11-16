@@ -1,8 +1,8 @@
 const AllGames = (props) => {
   // console.log(props)
   let games = props.games.map((game) => {
-    console.log(game.Url)
-    playLink = `{game.Url}`
+    console.log(game.gameUrl)
+    playLink = `{game.gameUrl}`
     return (
       <div key={game.id}>
         <img src={game.gameThumb} />
