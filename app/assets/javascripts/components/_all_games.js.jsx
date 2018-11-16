@@ -6,7 +6,7 @@ const AllGames = (props) => {
     return (
       <div key={game.id}>
         <img src={game.gameThumb} />
-        <a target="_parent" href={playLink}><p>{game.name}</p></a>
+        <a target="_blank" href={playLink}><p>{game.name}</p></a>
       </div >
     )
   })
