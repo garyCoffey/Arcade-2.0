@@ -15,7 +15,7 @@ class Body extends React.Component {
   }
 
   handleUpdate(post) {
-    fetch(`${URL}api/v1/posts/${post.id}`,
+    fetch(`https://arcade-room-blog.herokuapp.com/api/v1/posts/${post.id}`,
       {
         method: 'PUT',
         body: JSON.stringify({ post: post }),
