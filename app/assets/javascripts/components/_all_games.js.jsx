@@ -1,6 +1,6 @@
 const AllGames = (props) => {
   // console.log(props)
-  let games = props.games.map((game) => {
+  let games = props.games.slice(0, 20).map((game) => {
     playLink = `{game.Url}`
     return (
       <div key={game.id}>

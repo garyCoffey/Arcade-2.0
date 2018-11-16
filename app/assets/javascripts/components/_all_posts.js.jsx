@@ -4,8 +4,6 @@ const AllPosts = (props) => {
     return (
       <div key={post.id}>
         <a href={showLink}><Post post={post} handleDelete={props.handleDelete} handleUpdate={props.handleUpdate} /></a>
-        {/* <h2>{post.blog}</h2>
-        <a href={showLink}><p>{post.address}</p></a> */}
       </div >
     )
   })
