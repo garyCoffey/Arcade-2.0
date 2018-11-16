@@ -1,4 +1,4 @@
-let url = 'https://cors-anywhere.herokuapp.com/http://www.cheatsit.com/gamefeed/start=200&limit=20'
+let url = 'https://cors-anywhere.herokuapp.com/http://www.cheatsit.com/gamefeed'
 
 class Canvas extends React.Component {
   constructor(props) {
