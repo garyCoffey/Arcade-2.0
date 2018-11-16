@@ -9,9 +9,9 @@ class Canvas extends React.Component {
   componentDidMount() {
     let url = 'https://cors-anywhere.herokuapp.com/http://www.cheatsit.com/gamefeed'
 
-    fetch(url)//, optionalParam)
+    fetch(url)
       .then(response => response.json())
-      .then(data => this.setState({ games: data.slice(0, 20) }));
+      .then(data => this.setState({ games: data.splice(0, 20) }));
   }
 
   render() {
